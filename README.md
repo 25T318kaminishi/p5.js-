@@ -7,7 +7,7 @@
     </script>
   </head>
   <body>
-    <h1>P5.js 練習問題解答</h1>
+    <h1>P5.js 練習問題</h1>
     <script>
       function setup() {
         createCanvas(320, 180);
