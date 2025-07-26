@@ -23,7 +23,7 @@ const maxHeight = 180;
 // 色相の範囲
 const startHue = 320; // 一番大きな長方形の色相
 const endHue = 0; // 一番小さな長方形の色相
-const hueStep = {(startHue - endHue) / (totalRectCount - 1)}-20;
+const hueStep = (startHue - endHue) / (totalRectCount - 1);
 
 // 一番大きな長方形の左上座標
 const originX = 0;
