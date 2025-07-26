@@ -12,8 +12,7 @@
     function setup() {
         createCanvas(320, 180);
       }
-    
-    function draw() {
+   function draw() {
         stroke("black");
         strokeWeight(0.1);
         full("orange");
