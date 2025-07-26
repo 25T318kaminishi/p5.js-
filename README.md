@@ -51,7 +51,7 @@ fill(hue, 50, 75); // L=75%、C=50%（HSLの彩度と輝度に相当）
 
 // 長方形の描画
 rect(x, y, rectWidth, rectHeight);
-
+  }
       }
     </script>
   </body>
