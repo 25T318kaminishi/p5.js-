@@ -15,46 +15,29 @@
    function draw() {
         stroke("black");
         strokeWeight(0.1);
-        const totalRectCount = 18;
-const maxWidth = 320;
-const maxHeight = 180;
+      let numRects = 18;
+let startH = 0;
+let endH = 340;
+let L = 0.75; // 例としてLを75%に設定
+let C = 0.50; // 例としてCを50%に設定
 
-// 色相の範囲
-const startHue = 0; // 一番大きな長方形の色相
-const endHue = 340; // 一番小さな長方形の色相
-const hueStep = (endHue - startHue) / (totalRectCount - 1);
+for (let i = 0; i < numRects; i++) {
+let h = map(i, 0, numRects - 1, startH, endH);
+fill(h, L, C);
 
-// 一番大きな長方形の左上座標
-const originX = 0;
-const originY = 0;
+// 長方形のサイズを計算（徐々に小さくなる）
+let rectWidth = map(i, 0, numRects - 1, width, width / numRects);
+let rectHeight = map(i, 0, numRects - 1, height, height / numRects);
 
-// 一番大きな長方形の幅と高さ
-const baseWidth = maxWidth;
-const baseHeight = maxHeight;
+// 長方形の位置を計算（右下へ移動）
+let x = map(i, 0, numRects - 1, 0, width - rectWidth);
+let y = map(i, 0, numRects - 1, 0, height - rectHeight);
 
-for (let i = 0; i < totalRectCount; i++) {
-// 比率
-const ratio = (totalRectCount - i) / totalRectCount; // 1.0 → 1, 0.0 → 18番目
-// 長方形の幅と高さ
-const rectWidth = baseWidth * ratio;
-const rectHeight = baseHeight * ratio;
-
-// 長方形の左上座標（右下に収まるため、右下座標を基準にして左上を計算）
-const x = originX + (baseWidth - rectWidth);
-const y = originY + (baseHeight - rectHeight);
-
-// 色相の計算
-const hue = startHue + i * hueStep;
-
-// 塗りつぶしの色設定（HSL）
-fill(hue, 50, 75); // L=75%、C=50%（HSLの彩度と輝度に相当）
-
-// 長方形の描画
 rect(x, y, rectWidth, rectHeight);
-  }
-      }
-    </script>
-  </body>
+}
+}
+</script>
+</body>
 </html>
 
 
