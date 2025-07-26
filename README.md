@@ -2,7 +2,7 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <title>P5.js 練習問題解答</title>
+    <title>P5.js 練習問題</title>
     <script src="https://cdn.jsdelivr.net/npm/p5@2.0.3/lib/p5.min.js">
     </script>
   </head>
