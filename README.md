@@ -20,7 +20,7 @@ const maxWidth = 320;
 const maxHeight = 180;
 
 // 色相の範囲
-const startHue = 0; // 一番大きな長方形の色相
+const startHue = 100; // 一番大きな長方形の色相
 const endHue = 340; // 一番小さな長方形の色相
 const hueStep = (endHue - startHue) / (totalRectCount - 1);
 
