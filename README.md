@@ -15,7 +15,7 @@
        function draw() {
         stroke("black");
         strokeWeight(0.1);
-        elipse(200, 100, 100, 120)
+        elipse(200, 100, 100, 120);
       }
     </script>
   </body>
